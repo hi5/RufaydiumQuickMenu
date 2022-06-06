@@ -1,6 +1,6 @@
 # Rufaydium Quick Menu
 
-Menu to assist during scripts using [Rufaydium](https://github.com/Xeo786/Rufaydium-Webdriver), a WebDriver library for AutoHotkey.
+Menu to assist during writing scripts using [Rufaydium](https://github.com/Xeo786/Rufaydium-Webdriver), a WebDriver library for AutoHotkey.
 
 It will paste the selected entry from a submenu at the current caret location in your editor.
 
@@ -19,7 +19,7 @@ At first startup it will create `RufaydiumQuickMenu.ini`. Available keys:
 
 Hotkey in AutoHotkey notation used to show the menu.
 
-Editor one executable name (notepad.exe, notepad++.exe, atom.exe, etc) to make limit the menu to specific program.  
+Editor: one executable name (notepad.exe, notepad++.exe, atom.exe, etc) to limit the menu to specific program.
 
 Examples:
 
@@ -30,7 +30,7 @@ Define `Session` as `MyPage`, in the Menu `Session.NewTab()` becomes `MyPage.New
 
 To add personal favourites to the menu, create a file called `QuickAccess.txt`. Each line in that file will become a menu entry.  
 Text after a semi-colon `;` will become a menu hint.  
-Restart Rufaydium Quick Menu after editing `QuickAccess.txt` for new/changed entries to be loaded.  
+Restart Rufaydium Quick Menu after editing `QuickAccess.txt` for new/changed entries to be loaded.
 
 `QuickAccess.txt` will not be part of the Rufaydium Quick Menu repository[1].
 
@@ -71,11 +71,11 @@ Return
 
 ## RufaydiumQuickMenu.txt (3)
 
-Nearly all available regular Rufaydium/WebDriver command, functions, methods you may need to write a script.  
+Nearly all available regular Rufaydium/WebDriver commands, functions, methods you may need to write a script.  
 Suggestions for `RufaydiumQuickMenu.txt` and the script welcome via pull requests.
 
-As there might be changes to `RufaydiumQuickMenu.txt` is probably best left unmodified.
-any changes will be lost when updating from this repository. (See updating below).
+As there might be changes to `RufaydiumQuickMenu.txt`, it is probably best left unmodified.  
+Any changes will be lost when updating from this repository. (See updating below).
 
 ## Updating
 
