@@ -51,7 +51,7 @@ SubmenuCounter:=0
 Gui, RQMSetup:New
 Gui, RQMSetup: +ToolWindow AlwaysOnTop
 Gui, RQMSetup:Font, bold
-Gui, RQMSetup:Add, Link, x5 y5   , Rufaydium Quick Menu @ <a href="https://github.com/hi5/RufaydiumQuickMenu">GitHub</a> @ <a href="https://www.autohotkey.com/boards/">AHK forum</a>.
+Gui, RQMSetup:Add, Link, x5 y5   , Rufaydium Quick Menu @ <a href="https://github.com/hi5/RufaydiumQuickMenu">GitHub</a> @ <a href="https://www.autohotkey.com/boards/viewtopic.php?f=6&t=104985">AHK forum</a>.
 Gui, RQMSetup:Font,
 Gui, RQMSetup:Add, Link, x5 yp+20, <a href="https://github.com/Xeo786/Rufaydium-Webdriver">Rufaydium</a> is a Webdriver Library for AutoHotkey by <a href="https://github.com/Xeo786/Rufaydium-Webdriver">Xeo786</a>.
 Gui, RQMSetup:Add, Button, x5     yp+30  w100 h25 gSetup, Setup
