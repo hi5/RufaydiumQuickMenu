@@ -1,0 +1,138 @@
+Driver and Browsers
+	Browser:=new Rufaydium() ; default ChromeDriver
+	Browser:=new Rufaydium("geckodriver.exe") ; Firefox
+	Browser:=new Rufaydium("msedgedriver.exe") ; MS Edge
+	Browser:=new Rufaydium("operadriver.exe") ; Opera
+	Other browsers: Browser.capabilities.Setbinary("C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe")
+	Other browsers: Browser.Capabilities.Resetbinary() ; Reset binary to driver default
+	Browser.Driver.QuitAllSessions()
+	Browser.Driver.Exit()
+	Browser.Driver.visible:=true
+	Browser.Driver.visible:=false
+Capabilities
+	Browser.capabilities.setUserProfile("Default")
+	Browser.capabilities := new capabilities(Browser,BrowserOptions,"windows",true)
+	Browser.capabilities.HeadlessMode := true
+	Browser.capabilities.IncognitoMode := true
+	Browser.capabilities.useCrossOriginFrame := true
+	Browser.capabilities.addArg("--headless")
+	Browser.capabilities.RemoveArg("--headless")
+	Browser.capabilities.Addextensions(extensionloaction) ; Load extensions
+	Browser.capabilities.AddexcludeSwitches("enable-automation") ; Chrome without default args
+	Browser.capabilities.DebugPort(9255) ; Change port for debuggerAddress
+Frame
+	Session.Frame() ; Switch to frame ID
+	Session.ParentFrame() ; Back to parent frame
+	Session.FramesLength()
+Sessions
+	Session:=Browser.NewSession()
+	Session:=Browser.getSession(1) ; (Session, Tab)
+	Session:=Browser.getSessionByUrl(url)
+	Session:=Browser.getSessionByTitle(Title)
+	Session.Navigate(url)
+	Session.NewTab()
+	Session.NewWindow()
+	Session.Back()
+	Session.Forward()
+	Session.Refresh()
+	Session.SwitchTab() ; id
+	Session.SwitchbyTitle()
+	Session.SwitchbyURL()
+	Session.Close()
+	Session.Exit()
+	Session.Title
+	Session.HTML
+	Session.url
+	Session.IsLoading	; ChromeDriver only, returns Boolean
+Alert	
+	Session.Alert("GET") ; Getting text from msg
+	Session.Alert("accept") ; Pressing OK/Accept msg
+	Session.Alert("dismiss") ; Cancel/Dismiss msg
+	Session.Alert("Send","some text") ; Send an Alert msg 
+Screenshot / PDF
+	Session.Screenshot(filepath) ; PNG format
+	Session.Print(PDFlocation,{"":""}) ; Default Print options
+	Session.Print(PDFlocation,PrintOptions.A4_Default) ; See PrintOptions
+Cookies
+	Session.GetCookies() ; Returns Array of cookies
+	Session.GetCookieName(Name) ; Cookie with Name 
+	Session.AddCookie(CookieObj) ; Add Cookie
+Accessing Element(s)
+	Session.getElementByID(id)
+	Session.QuerySelector(Path)
+	Session.QuerySelectorAll(Path)
+	Session.getElementsbyClassName(Class)
+	Session.getElementsbyName(TagName) ; same as TagName
+	Session.getElementsbyXpath(xPath)
+	.Count() ; Element
+Attributes Properties and CSS
+	.GetAttribute(Name) ; Element
+	.GetProperty(Name) ; Element
+	.GetCSS(Name) ; Element
+Window Position
+	Session.GetRect() ; Returns objects
+	Session.SetRect(20,30,500,400) ; x, y, w, h 
+	Session.Minimize()
+	Session.Maximize()
+Mouse ; 0:Left, 1:Middle, 2:Right
+	Session.Click()
+	Session.DoubleClick()
+	Session.MBDown()
+	Session.MBup()
+	Session.Move(x,y) 
+SendKey
+	.SendKey(Key.Ctrl "a" Key.Delete) ; Select All + Delete
+	.SendKey(Key.Ctrl "v") ; Paste
+	.SendKey(Key.Unidentified)
+	.SendKey(Key.Cancel)
+	.SendKey(Key.Help)
+	.SendKey(Key.Backspace)
+	.SendKey(Key.Tab)
+	.SendKey(Key.Clear)
+	.SendKey(Key.Return)
+	.SendKey(Key.Enter)
+	.SendKey(Key.Shift)
+	.SendKey(Key.Control)
+	.SendKey(Key.Ctrl)
+	.SendKey(Key.Alt)
+	.SendKey(Key.Pause)
+	.SendKey(Key.Escape)
+	.SendKey(Key.Space)
+	.SendKey(Key.PageUp)
+	.SendKey(Key.PageDown)
+	.SendKey(Key.End)
+	.SendKey(Key.Home)
+	.SendKey(Key.ArrowLeft)
+	.SendKey(Key.ArrowUp)
+	.SendKey(Key.ArrowRight)
+	.SendKey(Key.ArrowDown)
+	.SendKey(Key.Insert)
+	.SendKey(Key.Delete)
+	.SendKey(Key.F1)
+	.SendKey(Key.F2)
+	.SendKey(Key.F3)
+	.SendKey(Key.F4)
+	.SendKey(Key.F5)
+	.SendKey(Key.F6)
+	.SendKey(Key.F7)
+	.SendKey(Key.F8)
+	.SendKey(Key.F9)
+	.SendKey(Key.F10)
+	.SendKey(Key.F11)
+	.SendKey(Key.F12)
+	.SendKey(Key.Meta)
+	.SendKey(ZenkakuHankaku)
+WDElement
+	Element.Name() ; Return TagName
+	Element.Rect() ; Return Position, Size
+	Element.Size() ; Return Size
+	Element.Location() ; Return Position
+	Element.LocationInView() ; Return position in view
+	Element.enabled() ; Boolean
+	Element.Selected() ; Boolean
+	Element.Displayed() ; Boolean
+	Element.Submit() ; Trigger existing event(s)
+	Element.Click()
+	Element.Clear() ; clear selected element
+
+
