@@ -63,8 +63,9 @@ Accessing Element(s)
 	Session.QuerySelectorAll(Path)
 	Session.getElementsbyClassName(Class)
 	Session.getElementsbyName(TagName) ; same as TagName
-	Session.getElementsbyXpath(xPath)
+	Session.getElementsbyXpath(xPath)	; Copy path from Inspect
 	.Count() ; Element
+	.Error ; Element
 Attributes Properties and CSS
 	.GetAttribute(Name) ; Element
 	.GetProperty(Name) ; Element
